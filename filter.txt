@@ -1,15 +1,14 @@
 [AdGuard]
-! Title: X PWA Filter for AdGuard
-! Description: PWA 버전 X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
+! Title: X Filter for AdGuard
+! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
 ! Version: 2024.0526.0
 ! Expires: 1 day
-! Homepage: https://github.com/hgsanguk/adguard-x-pwa-filter
-! Support: https://github.com/hgsanguk/adguard-x-pwa-filter/issues
-! License: https://github.com/hgsanguk/adguard-x-pwa-filter/blob/main/LICENSE
+! Homepage: https://github.com/hgsanguk/adguard-x-filter
+! Support: https://github.com/hgsanguk/adguard-x-filter/issues
+! License: https://github.com/hgsanguk/adguard-x-filter/blob/main/LICENSE
 !
 
 twitter.com,x.com##a[href="/i/grok"]
-twitter.com,x.com##a[href="/jobs"]
 twitter.com,x.com##a[href="/settings/monetization"]
 twitter.com,x.com##a[href="/i/premium_sign_up"]
 twitter.com,x.com##div[data-testid="primaryColumn"] nav + div:has(a[href="/i/premium_sign_up"])

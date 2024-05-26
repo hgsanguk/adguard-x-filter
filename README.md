@@ -1,4 +1,4 @@
-# AdGurard X PWA Filter
+# AdGurard X Filter
 X(구. 트위터) 웹 클라이언트의 불필요한 요소를 차단하여 서비스를 가볍게 이용할 수 있도록 하는 AdGuard 필터입니다. 특히 iOS, iPadOS 사용자가 광고를 차단하면서 네이티브 앱처럼 즐길 수 있는 PWA의 방해요소 필터링을 중점으로 합니다.
 
 Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), PC에선 [Control Panel for Twitter](https://github.com/insin/control-panel-for-twitter)가 있으니, 타 플랫폼은 해당 애플리케이션 사용을 권장합니다.
@@ -12,7 +12,7 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
   * 내 프로필의 아티클과 하이라이트 탭
   * 내 프로필의 마음에 들어요 상단의 X Premium 안내
   * 게시글 글자 제한 초과 시 발생하는 X Premium 안내
-* `filter-strict.txt`: 엄격한 필터입니다. 위의 기본 필터에 추가로 결제 유도 및 방해 요소를 제거합니다..
+* `filter-strict.txt`: 엄격한 필터입니다. 위의 기본 필터에 팔요없을 것으로 예상되는 요소를 추가로 제거합니다.
   * **기본 필터에서 제거 되는 모든 요소 포함**
   * 메뉴의 '채용'
   * 메뉴의 '광고'(광고주의 광고 관리 페이지)
@@ -25,16 +25,24 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
 * `script.js`: (추후 업데이트 예정) X를 홈화면에 추가할 때 X 로고 대신 예전 트위터 시절 아이콘이 보이도록 만드는 JavaScript입니다.
 
 ## 필터 링크
-**둘 중 하나만 추가해주세요.**
-* 기본 필터: `https://raw.githubusercontent.com/hgsanguk/adguard-x-pwa-filter/main/filter.txt`
-* 엄격 필터: `https://raw.githubusercontent.com/hgsanguk/adguard-x-pwa-filter/main/filter-strict.txt`
+> [!IMPORTANT]
+> 기본 필터와 엄격 필터 둘 중 하나만 추가하시면 됩니다. 두 개 다 추가할 경우 예기치 않은 오작동이 발생할 수 있습니다.
+
+**기본 필터**
+```
+https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
+```
+**엄격 필터**
+```
+https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-strict.txt
+```
 
 ## 사용 방법
 ### 필터
 1. App Store에서 [AdGuard](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162)를 설치합니다.
 2. 앱을 연 후 지시대로 Safari에서 AdGuard 확장 프로그램을 활성화합니다.
 3. AdGuard에서 `보호 > Safari 보호 > 필터 > Custom`에서 스위치를 켜 활성화합니다.
-4. 필터 추가로 위에서 원하는 필터의 링크를 추가합니다.
+4. 필터 추가를 누르면 나오는 입력 칸에 위에서 원하는 필터의 링크를 복사 후 붙여넣기 하고 다음을 누릅니다.
 5. Safari로 [X](https://x.com)에 접속합니다.
 6. Safari 주소창 하단, 중앙에 있는 옵션 버튼을 누르고 홈 화면에 추가를 누릅니다.
 7. 원하는 이름을 지정하고 홈 화면에 X의 바로가기를 추가합니다.
