@@ -9,10 +9,11 @@
 !
 
 !#include filter.txt
+
 twitter.com,x.com##a[href="/jobs"]
 twitter.com,x.com##a[href*="https://ads.x.com/"]
 twitter.com,x.com##a[href$="/communities"]
-twitter.com,x.com##div[role="presentation"]:has(a[href*="verified"], a[href$="/highlights"], a[href$="/articles"])
+twitter.com,x.com##div[role="presentation"]:has(a[href*="verified"], a[href$="/highlights"], a[href$="/articles"], a[href$="/superfollows"])
 twitter.com,x.com##a[href$="quick_promote_web/intro"]
 twitter.com,x.com##div > a[href$="/creator-subscriptions/subscriptions"]
 twitter.com,x.com##div[role="presentation"]:has(a[href$="/creator-subscriptions/subscriptions"])
