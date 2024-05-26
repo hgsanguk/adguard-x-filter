@@ -12,8 +12,7 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
   * 내 프로필의 아티클과 하이라이트 탭
   * 내 프로필의 마음에 들어요 상단의 X Premium 안내
   * 게시글 글자 제한 초과 시 발생하는 X Premium 안내
-* `filter-strict.txt`: 엄격한 필터입니다. 위의 기본 필터에 팔요없을 것으로 예상되는 요소를 추가로 제거합니다.
-  * **기본 필터에서 제거 되는 모든 요소 포함**
+* `filter-extra.txt`: 추가 필터입니다. 대부분의 사용자에게 팔요없을 것으로 예상되는 요소를 제거합니다.
   * 메뉴의 '채용'
   * 메뉴의 '광고'(광고주의 광고 관리 페이지)
   * 메뉴(하단 바)의 '커뮤니티'
@@ -25,16 +24,16 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
 * `script.js`: (추후 업데이트 예정) X를 홈화면에 추가할 때 X 로고 대신 예전 트위터 시절 아이콘이 보이도록 만드는 JavaScript입니다.
 
 ## 필터 링크
-> [!IMPORTANT]
-> 기본 필터와 엄격 필터 둘 중 하나만 추가하시면 됩니다. 두 개 다 추가할 경우 예기치 않은 오작동이 발생할 수 있습니다.
+> [!NOTE]
+> 기본 필터와 추가 필터는 각각 별개의 필터로, 추가 필터의 경우 기본 필터와 같이 사용해야 정상적으로 동작합니다.
 
 **기본 필터**
 ```
 https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
 ```
-**엄격 필터**
+**추가 필터**
 ```
-https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-strict.txt
+https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-extra.txt
 ```
 
 ## 사용 방법
