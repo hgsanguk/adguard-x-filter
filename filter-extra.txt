@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Extra Filter for AdGuard
 ! Description: X(구. 트위터)의 불필요한 요소를 제거하는 필터입니다.
-! Version: 2024.0528.1
+! Version: 2024.0528.2
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -49,7 +49,7 @@ twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/settings/manage_s
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
 
 ! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home(Mobile)
-twitter.com,x.com##div[data-testid="TopNavBar"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
+twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) div[data-testid="primaryColumn"] div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
 
 ! All Recommands(Communities, Users, Pinned Tweets, etc.) in Profile(Mobile)
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) div[data-testid="cellInnerDiv"]:not(:has(article, li[id^="verticalGridItem"]))
@@ -58,7 +58,7 @@ twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserNam
 twitter.com,x.com##div:has(> div > aside > a[href^="/i/connect_people"])
 
 ! Relevant Users in Sidebar(PC)
-twitter.com,x.com##div:has(> aside[role="complementary"])
+twitter.com,x.com##div:has(> aside[role="complementary"] > div > button[data-testid="UserCell"])
 
 ! Discover more in the bottom of Posts
 twitter.com,x.com##div[data-testid="primaryColumn"] div[data-testid="cellInnerDiv"]:has(h2[aria-level="2"] + div) ~ div[data-testid="cellInnerDiv"]
