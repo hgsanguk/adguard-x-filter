@@ -6,22 +6,25 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
 ## 종류
 기본적으로 사용자가 X Premium을 결제할 의향이 없다는 가정 하에 제작되었습니다. 
 * `filter.txt`: 기본 필터입니다. 무료 사용자에게 필요없는 X Premium 결제 유도만 제거합니다.
-  * 메뉴(하단 바)의 'Grok'
-  * 메뉴와 설정의 '수익 창출'
-  * 메뉴와 설정의 'X Premium'
+  * 메뉴(하단 바)의 Grok
+  * 메뉴와 설정의 수익 창출
+  * 메뉴와 설정의 X Premium
   * 내 프로필의 아티클과 하이라이트 탭
   * 내 프로필의 마음에 들어요 상단의 X Premium 안내
   * 게시글 글자 제한 초과 시 발생하는 X Premium 안내
-* `filter-extra.txt`: 추가 필터입니다. 대부분의 사용자에게 팔요없을 것으로 예상되는 요소를 제거합니다.
-  * 메뉴의 '채용'
-  * 메뉴의 '광고'(광고주의 광고 관리 페이지)
-  * 메뉴(하단 바)의 '커뮤니티'
-  * 알림창의 '인증됨' 탭
-  * 팔로잉/팔로워 목록의 '인증된 팔로워', '구독'(슈퍼 팔로잉) 탭
-  * 프로필의 '구독'(슈퍼 팔로잉) 수
+* `filter-extra.txt`: 추가 필터입니다. 대부분의 무료 사용자에게 필요없을 것으로 예상되는 요소를 제거합니다.
+  * 메뉴의 채용
+  * 메뉴의 광고(광고주의 광고 관리 페이지)
+  * 메뉴(하단 바)의 커뮤니티
+  * 내 트윗 우측 상단의 프로모션 버튼
+  * 알림창의 인증됨 탭
+  * 팔로잉/팔로워 목록의 인증된 팔로워, 구독(슈퍼 팔로잉) 탭
+  * 설정의 크리에이터 구독
+  * 프로필의 커뮤니티
+  * 프로필의 구독(슈퍼 팔로잉) 수
   * X Premium 사용자 프로필의 아티클과 하이라이트, 구독자용 탭
   * X Premium 사용자 프로필의 구독하기 버튼
-* `script.js`: (추후 업데이트 예정) X를 홈화면에 추가할 때 X 로고 대신 예전 트위터 시절 아이콘이 보이도록 만드는 JavaScript입니다.
+  * 타임라인 추천 탭의 내가 팔로우하는 사람들의 메인 게시물
 
 ## 필터 링크
 > [!NOTE]
@@ -37,7 +40,7 @@ https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-extra.tx
 ```
 
 ## 사용 방법
-### 필터
+### iOS, iPadOS
 1. App Store에서 [AdGuard](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162)를 설치합니다.
 2. 앱을 연 후 지시대로 Safari에서 AdGuard 확장 프로그램을 활성화합니다.
 3. AdGuard에서 `보호 > Safari 보호 > 필터 > Custom`에서 스위치를 켜 활성화합니다.
@@ -45,10 +48,7 @@ https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-extra.tx
 5. Safari로 [X](https://x.com)에 접속합니다.
 6. Safari 주소창 하단, 중앙에 있는 옵션 버튼을 누르고 홈 화면에 추가를 누릅니다.
 7. 원하는 이름을 지정하고 홈 화면에 X의 바로가기를 추가합니다.
-8. 광고와 Premium 결제 유도 없는 깔끔한 X를 즐기시기 바랍니다.
-
-### 스크립트
-추후 업데이트 예정입니다.
+8. 광고, Premium 결제 유도와 방해 요소가 없는 깔끔한 X를 즐기시기 바랍니다.
  
 ## 사용 시 주의 사항
 ### X PWA 자체의 문제점
