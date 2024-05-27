@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Extra Filter for AdGuard
 ! Description: X(구. 트위터)의 불필요한 요소를 제거하는 필터입니다.
-! Version: 2024.0528.0
+! Version: 2024.0528.1
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -45,17 +45,19 @@ twitter.com,x.com##div > div > button[style*="border-color: rgb(201, 54, 204)"]
 ! Creator Subscriptions in Settings
 twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/settings/manage_subscriptions"])
 
-! Remove All Recommands(Communities, Users, Pinned Tweets, etc.) in Home and Profile(PC)
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div[dir="ltr"]))
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home(PC)
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
+
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home(Mobile)
+twitter.com,x.com##div[data-testid="TopNavBar"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
+
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Profile(Mobile)
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) div[data-testid="cellInnerDiv"]:not(:has(article, li[id^="verticalGridItem"]))
 
-! Remove All Recommands(Communities, Users, Pinned Tweets, etc.) in Home and Profile(Mobile)
-twitter.com,x.com##div[data-testid="TopNavBar"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div[dir="ltr"]))
-
-! Remove Recommands Users in Sidebar(PC)
+! Recommands Users in Sidebar(PC)
 twitter.com,x.com##div:has(> div > aside > a[href^="/i/connect_people"])
 
-! Remove Relevant Users in Sidebar(PC)
+! Relevant Users in Sidebar(PC)
 twitter.com,x.com##div:has(> aside[role="complementary"])
 
 ! Discover more in the bottom of Posts
