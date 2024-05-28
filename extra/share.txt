@@ -1,0 +1,31 @@
+! Communities Menu
+twitter.com,x.com##a[href$="/communities"]
+
+! Link About communities
+twitter.com,x.com##a[href^="/i/communities/"]
+
+! Article, Highlights Tab in Profile(include All)
+! Verified Followers, Subscribe Following Tab in Followers/Following List
+twitter.com,x.com##div[role="presentation"]:has(a[href*="verified"], a[href$="/highlights"], a[href$="/articles"], a[href$="/superfollows"])
+
+! Promote Button in My Tweets
+twitter.com,x.com##a[href$="quick_promote_web/intro"]
+
+! Subscriptions Count in Profile
+twitter.com,x.com##div > a[href$="/creator-subscriptions/subscriptions"]
+
+! Subscriptions Tab in Followers/Following List
+twitter.com,x.com##div[role="presentation"]:has(a[href$="/creator-subscriptions/subscriptions"])
+
+! Subscribe Button in Profile
+twitter.com,x.com##div > div > button[style*="border-color: rgb(201, 54, 204)"]
+
+! Creator Subscriptions in Settings
+twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/settings/manage_subscriptions"])
+
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Profile
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) div[data-testid="cellInnerDiv"]:not(:has(article, li[id^="verticalGridItem"]))
+
+! Discover more in the bottom of Posts
+twitter.com,x.com##div[data-testid="primaryColumn"] div[data-testid="cellInnerDiv"]:has(h2[aria-level="2"] + div) ~ div[data-testid="cellInnerDiv"]
+twitter.com,x.com##div[data-testid="primaryColumn"] div[data-testid="cellInnerDiv"]:has(h2[aria-level="2"] + div)

@@ -1,0 +1,14 @@
+! Subscribe Box in Sidebar
+twitter.com,x.com##div:has(> aside > a[href="/i/verified-choose"])
+
+! Monetization Menu
+twitter.com,x.com##div[data-testid="Dropdown"] a[href="/settings/monetization"]
+
+! X Premium Menu
+twitter.com,x.com##nav > a[href="/i/premium_sign_up"]
+
+! 'Upgrade to get verified Button' in Verified User's Profile
+twitter.com,x.com##div[data-testid="HoverCard"] a[href^="/i/premium_sign_up"]
+
+! Create Community Button
+twitter.com,x.com##div > a[href="/i/verified-get-verified"]

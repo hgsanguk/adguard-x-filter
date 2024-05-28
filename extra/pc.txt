@@ -1,0 +1,14 @@
+! Jobs Menu
+twitter.com,x.com##div[data-testid="Dropdown"] a[href="/jobs"]
+
+! Ads Menu
+twitter.com,x.com##div[data-testid="Dropdown"] a[href^="https://ads.x.com/"]
+
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home(PC)
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
+
+! Recommands Users in Sidebar
+twitter.com,x.com##div:has(> div > aside > a[href^="/i/connect_people"])
+
+! Relevant Users in Sidebar
+twitter.com,x.com##div:has(> aside[role="complementary"] > div > button[data-testid="UserCell"])
