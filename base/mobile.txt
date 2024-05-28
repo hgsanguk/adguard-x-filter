@@ -1,0 +1,11 @@
+! Monetization Menu
+twitter.com,x.com##div[role="dialog"] a[href="/settings/monetization"]
+
+! X Premium Menu
+twitter.com,x.com##div[role="dialog"] a[href="/i/premium_sign_up"]
+
+! 'Upgrade to get verified Button' in Verified User's Profile
+twitter.com,x.com##div[data-testid="sheetDialog"] a[href^="/i/premium_sign_up"]
+
+! Create Community Button
+twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
