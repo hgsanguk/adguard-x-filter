@@ -29,7 +29,7 @@ twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/settings/manage_s
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
 ! Discover more in the bottom of Posts
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(article[tabindex="-1"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]:not(:has(article))
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(article[tabindex="-1"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(article[tabindex="-1"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
 
 !#if (adguard_app_ios || adguard_app_android)
