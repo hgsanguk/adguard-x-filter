@@ -8,12 +8,12 @@
 ! License: https://github.com/hgsanguk/adguard-x-filter/blob/main/LICENSE
 !
 
-!#include extra/share.txt
+!#include /extra/share.txt
 
 !#if (adguard_app_ios || adguard_app_android)
-!#include extra/mobile.txt
+!#include /extra/mobile.txt
 !#endif
 
 !#if (adguard_app_windows || adguard_app_mac || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge)
-!#include extra/pc.txt
+!#include /extra/pc.txt
 !#endif
