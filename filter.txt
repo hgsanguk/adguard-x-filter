@@ -8,12 +8,37 @@
 ! License: https://github.com/hgsanguk/adguard-x-filter/blob/main/LICENSE
 !
 
-!#include /base/share.txt
+! Grok
+twitter.com,x.com##nav > a[href="/i/grok"]
+! 'Subscribe to Premium Message' in My Profile's Likes list
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/settings/profile"]) nav + div:has(a[href="/i/premium_sign_up"])
+! Subscribe to Premium Message in post when exceed the character limit
+twitter.com,x.com##div[role="status"]:has(a[href^="/i/premium_sign_up"])
+! X Premium, Monetization in Settings
+twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/i/premium_sign_up"], a[href="/settings/monetization"])
+! Unnecessary Tab in My Profile
+twitter.com,x.com##div:has(a[href="/settings/profile"]) + nav div[role="presentation"]:has(a[href$="/articles"], a[href$="/highlights"])
 
 !#if (adguard_app_ios || adguard_app_android)
-!#include /base/mobile.txt
+! Monetization Menu
+twitter.com,x.com##div[role="dialog"] a[href="/settings/monetization"]
+! X Premium Menu
+twitter.com,x.com##div[role="dialog"] a[href="/i/premium_sign_up"]
+! 'Upgrade to get verified Button' in Verified User's Profile
+twitter.com,x.com##div[data-testid="sheetDialog"] a[href^="/i/premium_sign_up"]
+! Create Community Button
+twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
 !#endif
 
 !#if (adguard_app_windows || adguard_app_mac || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge)
-!#include /base/pc.txt
+! Subscribe Box in Sidebar
+twitter.com,x.com##div:has(> aside > a[href="/i/verified-choose"])
+! Monetization Menu
+twitter.com,x.com##div[data-testid="Dropdown"] a[href="/settings/monetization"]
+! X Premium Menu
+twitter.com,x.com##nav > a[href="/i/premium_sign_up"]
+! 'Upgrade to get verified Button' in Verified User's Profile
+twitter.com,x.com##div[data-testid="HoverCard"] a[href^="/i/premium_sign_up"]
+! Create Community Button
+twitter.com,x.com##div > a[href="/i/verified-get-verified"]
 !#endif

@@ -1,9 +1,0 @@
-! Jobs Menu
-twitter.com,x.com##div[role="dialog"] a[href="/jobs"]
-
-! Ads Menu
-twitter.com,x.com##div[role="dialog"] a[href^="https://ads.x.com/"]
-
-! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home
-twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article), a[href^="/i/status/"])
-twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
