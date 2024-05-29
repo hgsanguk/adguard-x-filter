@@ -28,9 +28,6 @@ twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/settings/manage_s
 ! Who to Follow in Profile
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
-! Discover more in the bottom of Posts
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(article[tabindex="-1"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(article[tabindex="-1"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
 
 !#if (adguard_app_ios || adguard_app_android)
 ! Jobs Menu
@@ -40,9 +37,11 @@ twitter.com,x.com##div[role="dialog"] a[href^="https://ads.x.com/"]
 ! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home
 twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article), a[href^="/i/status/"])
 twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
-!#endif
+! Discover more in the bottom of Posts
+twitter.com,x.com##div:has(div[data-testid="TopNavBar"] button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
+twitter.com,x.com##div:has(div[data-testid="TopNavBar"] button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
 
-!#if (adguard_app_windows || adguard_app_mac || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge)
+!#else
 ! Jobs Menu
 twitter.com,x.com##div[data-testid="Dropdown"] a[href="/jobs"]
 ! Ads Menu
@@ -54,4 +53,7 @@ twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edi
 twitter.com,x.com##div:has(> div > aside > a[href^="/i/connect_people"])
 ! Relevant Users in Sidebar
 twitter.com,x.com##div:has(> aside[role="complementary"] > div > button[data-testid="UserCell"])
+! Discover more in the bottom of Posts
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
 !#endif
