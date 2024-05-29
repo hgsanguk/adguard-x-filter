@@ -17,7 +17,7 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
 * `filter-extra.txt`: 추가 필터입니다. 라이트한 사용자에게 필요없을 것으로 예상되는 요소를 제거합니다.
   * 메뉴의 채용
   * 메뉴의 광고(광고주의 광고 관리 페이지)
-  * 내 트윗 우측 상단의 프로모션 버튼
+  * 내 게시글 우측 상단의 프로모션 버튼
   * 알림창의 인증됨 탭
   * 팔로잉/팔로워 목록의 인증된 팔로워, 구독(슈퍼 팔로잉) 탭
   * 설정의 크리에이터 구독
@@ -26,7 +26,7 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
   * X Premium 사용자 프로필의 구독하기 버튼
   * 내 프로필의 Who to follow
   * 타임라인 추천 탭의 내가 팔로우하는 사람들의 메인 게시물, Who to follow, 추천 커뮤니티 등
-  * 트윗 최하단의 둘러보기(트윗 추천)
+  * 게시글 상세보기 최하단의 둘러보기(트윗 추천)
 
 ## 필터 링크
 > [!NOTE]

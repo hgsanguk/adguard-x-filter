@@ -4,8 +4,9 @@ twitter.com,x.com##div[data-testid="Dropdown"] a[href="/jobs"]
 ! Ads Menu
 twitter.com,x.com##div[data-testid="Dropdown"] a[href^="https://ads.x.com/"]
 
-! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home(PC)
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) div[data-testid="cellInnerDiv"]:not(:has(article, button > div > div > span))
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
 
 ! Recommands Users in Sidebar
 twitter.com,x.com##div:has(> div > aside > a[href^="/i/connect_people"])
