@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Extra Filter for AdGuard
 ! Description: X(구. 트위터)의 불필요한 요소를 제거하는 필터입니다.
-! Version: 2024.0529.0
+! Version: 2024.0530.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -35,8 +35,8 @@ twitter.com,x.com##div[role="dialog"] a[href="/jobs"]
 ! Ads Menu
 twitter.com,x.com##div[role="dialog"] a[href^="https://ads.x.com/"]
 ! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home
-twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article), a[href^="/i/status/"])
-twitter.com,x.com##div:has(div[data-testid="TopNavBar"] a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
+twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
+twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
 ! Discover more in the bottom of Posts
 twitter.com,x.com##div:has(div[data-testid="TopNavBar"] button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
 twitter.com,x.com##div:has(div[data-testid="TopNavBar"] button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
@@ -47,8 +47,8 @@ twitter.com,x.com##div[data-testid="Dropdown"] a[href="/jobs"]
 ! Ads Menu
 twitter.com,x.com##div[data-testid="Dropdown"] a[href^="https://ads.x.com/"]
 ! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(a[href="/home/pinned/edit"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
 ! Recommands Users in Sidebar
 twitter.com,x.com##div:has(> div > aside > a[href^="/i/connect_people"])
 ! Relevant Users in Sidebar

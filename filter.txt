@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
-! Version: 2024.0529.0
+! Version: 2024.0530.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -28,9 +28,8 @@ twitter.com,x.com##div[role="dialog"] a[href="/i/premium_sign_up"]
 twitter.com,x.com##div[data-testid="sheetDialog"] a[href^="/i/premium_sign_up"]
 ! Create Community Button
 twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
-!#endif
 
-!#if (adguard_app_windows || adguard_app_mac || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge)
+!#else
 ! Subscribe Box in Sidebar
 twitter.com,x.com##div:has(> aside > a[href="/i/verified-choose"])
 ! Monetization Menu
