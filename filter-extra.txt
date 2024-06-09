@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Extra Filter for AdGuard
 ! Description: X(구. 트위터)의 불필요한 요소를 제거하는 필터입니다.
-! Version: 2024.0530.0
+! Version: 2024.0609.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -56,4 +56,7 @@ twitter.com,x.com##div:has(> aside[role="complementary"] > div > button[data-tes
 ! Discover more in the bottom of Posts
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(button[data-testid="app-bar-back"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
+! Discover more at side (with Picture)
+twitter.com,x.com##div[aria-labelledby="modal-header"] section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div) ~ div[data-testid="cellInnerDiv"]
+twitter.com,x.com##div[aria-labelledby="modal-header"] section > div > div > div[data-testid="cellInnerDiv"]:has(h2 + div)
 !#endif
