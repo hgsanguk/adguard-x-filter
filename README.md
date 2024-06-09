@@ -13,6 +13,7 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
   * 내 프로필의 마음에 들어요 상단의 X Premium 안내
   * 인증된 사용자 프로필의 배지를 누르면 뜨는 X Premium 구독 버튼
   * 게시물 글자 제한 초과 시 X Premium 안내
+  * 타임라인에서 가끔 보이는 X Premium 안내
   * 커뮤니티 우측 상단 커뮤니티 생성 버튼
 * `filter-extra.txt`: 추가 필터입니다. 라이트한 사용자에게 필요없을 것으로 예상되는 요소를 제거합니다.
   * 메뉴의 채용
