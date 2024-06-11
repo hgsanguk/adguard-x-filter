@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
-! Version: 2024.0611.0
+! Version: 2024.0612.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -21,6 +21,7 @@ twitter.com,x.com##div:has(a[href="/settings/profile"]) + nav div[role="presenta
 
 !#if (adguard_app_ios || adguard_app_android)
 ! X Premium Prompt in Timeline
+twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
 ! Monetization Menu
 twitter.com,x.com##div[role="dialog"] > div > div > div:has(a[href="/settings/monetization"])
@@ -35,6 +36,7 @@ twitter.com,x.com##div[role="group"] div[data-testid="sheetDialog"] > a[data-tes
 
 !#else
 ! X Premium Prompt in Timeline
+twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
 ! Subscribe Box in Sidebar
 twitter.com,x.com##div:has(> aside > a[href="/i/verified-choose"])
