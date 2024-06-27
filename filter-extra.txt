@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Extra Filter for AdGuard
 ! Description: X(구. 트위터)의 불필요한 요소를 제거하는 필터입니다.
-! Version: 2024.0613.1
+! Version: 2024.0628.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -51,7 +51,7 @@ twitter.com,x.com##div:has(div[data-testid="TopNavBar"] button[data-testid="app-
 twitter.com,x.com##div[data-testid="Dropdown"] > div > div:has(a[href="/jobs"])
 ! Ads Menu
 twitter.com,x.com##div[data-testid="Dropdown"] > div > div:has(a[href^="https://ads.x.com/"])
-! All Recommands(Communities, Users, Pinned Tweets, etc.) in Home
+! All Recommands(Communities, Users, Pinned Tweets, etc.) in Timeline
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(h2)
 ! Recommands Users in Sidebar
