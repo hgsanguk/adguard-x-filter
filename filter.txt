@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
-! Version: 2024.0707.0
+! Version: 2024.0731.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -25,6 +25,7 @@ twitter.com,x.com##div[data-testid="editWithPremium"]
 ! X Premium Prompt in Timeline
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
+twitter.com,x.com##div[data-testid="TopNavBar"] div > div:has(> a[role="link"][href="/i/premium_sign_up"])
 ! Monetization Menu, X Premium Menu, Verified Organization
 twitter.com,x.com##div[role="dialog"] > div > div > div:has(a[href="/settings/monetization"], a[href="/i/premium_sign_up"], a[href="/i/verified-orgs-signup"])
 ! 'Upgrade to get verified Button' in Verified User's Profile
