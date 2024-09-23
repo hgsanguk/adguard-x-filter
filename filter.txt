@@ -51,6 +51,4 @@ twitter.com,x.com##nav > a[href="/i/verified-orgs-signup"]
 twitter.com,x.com##div[data-testid="HoverCard"] a[href^="/i/premium_sign_up"]
 ! Create Community Button
 twitter.com,x.com##div > a[href="/i/verified-get-verified"]
-! Verified Nofification
-twitter.com,x.com##div[role="presentation"]:has(> a[href="/notifications/verified"])
 !#endif

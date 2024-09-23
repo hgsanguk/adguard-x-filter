@@ -14,7 +14,7 @@ twitter.com,x.com##nav > a[href$="/communities"]
 twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="UserName"]) div > div > a[href^="/i/communities/"]:has(div)
 ! Article, Highlights Tab in Profile(include All)
 ! Subscribe Following Tab in Followers/Following List
-twitter.com,x.com##div[role="presentation"]:has(a[href$="/superfollows"])
+twitter.com,x.com##div[role="presentation"]:has(a[href$="/highlights"], a[href$="/articles"], a[href$="/superfollows"])
 ! Promote Button in My Tweets
 twitter.com,x.com##article a[href$="quick_promote_web/intro"]
 ! Subscriptions Count in Profile
@@ -34,6 +34,8 @@ twitter.com,x.com##div:has(> div[data-testid="jobs"])
 twitter.com,x.com##div:has(> button > svg[data-testid="icon-subscriber"])
 ! Jobs Menu
 twitter.com,x.com##nav > a[href="/jobs"]
+! Verified Nofification
+twitter.com,x.com##div[role="presentation"]:has(> a[href="/notifications/verified"])
 
 !#if (adguard_app_ios || adguard_app_android)
 ! Jobs Menu
