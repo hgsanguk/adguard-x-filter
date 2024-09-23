@@ -17,7 +17,7 @@ twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href="/i/premium_sign_up
 ! Unnecessary Tab in My Profile
 twitter.com,x.com##div:has(a[href="/settings/profile"]) + nav div[role="presentation"]:has(a[href$="/articles"], a[href$="/highlights"])
 ! Get Verfiy Mark Button in My Profile
-twitter.com,x.com##div[data-testid="UserName"] > div > div:has(a[href="/i/premium_sign_up"])
+twitter.com,x.com##div[data-testid="UserName"] div:has(> a[href="/i/premium_sign_up"])
 ! Highlight on My Profile
 twitter.com,x.com##a[data-testid="highlightUpsell"]
 ! Edit Post
@@ -27,7 +27,7 @@ twitter.com,x.com##div[data-testid="editWithPremium"]
 ! X Premium Prompt in Timeline
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
-twitter.com,x.com##div[data-testid="TopNavBar"] div > div:has(> a[role="link"][href="/i/premium_sign_up"])
+twitter.com,x.com##div[data-testid="TopNavBar"] div:has(> a[href="/i/premium_sign_up"])
 ! Monetization Menu, X Premium Menu, Verified Organization
 twitter.com,x.com##div[role="dialog"] > div > div > div:has(a[href="/settings/monetization"], a[href="/i/premium_sign_up"], a[href="/i/verified-orgs-signup"])
 ! 'Upgrade to get verified Button' in Verified User's Profile
