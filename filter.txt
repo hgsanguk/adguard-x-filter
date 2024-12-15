@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
-! Version: 2024.1212.0
+! Version: 2024.1215.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -10,7 +10,7 @@
 
 ! Grok
 twitter.com,x.com##nav > a[href="/i/grok"]
-twitter.com,x.com##div[role="group"] > div:has(> button[aria-label*="Grok"])
+twitter.com,x.com##article div:has(> button[aria-label*="Grok"])
 ! Subscribe to Premium Message in post when exceed the character limit
 twitter.com,x.com##div[role="status"]:has(a[href^="/i/premium_sign_up"])
 ! X Premium, Monetization in Settings
