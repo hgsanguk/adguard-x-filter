@@ -8,9 +8,6 @@
 ! License: https://github.com/hgsanguk/adguard-x-filter/blob/main/LICENSE
 !
 
-! Grok
-twitter.com,x.com##nav > a[href="/i/grok"]
-twitter.com,x.com##article div:has(> button[aria-label*="Grok"])
 ! Subscribe to Premium Message in post when exceed the character limit
 twitter.com,x.com##div[role="status"]:has(a[href^="/i/premium_sign_up"])
 ! X Premium, Monetization in Settings
