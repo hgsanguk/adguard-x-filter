@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Extra Filter for AdGuard
 ! Description: X(구. 트위터)의 이용자가 자주 사용하지 않는 기능을 제거하는 필터입니다.
-! Version: 2025.0114.0
+! Version: 2025.0202.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -9,8 +9,9 @@
 !
 
 ! Grok Button in Profile
+twitter.com,x.com##div:has(> div > div[data-testid="GrokDrawer"])
 twitter.com,x.com##div[data-testid="cellInnerDiv"] > div > div > article div:has(> nav[role="navigation"]> div > div[data-testid="ScrollSnap-SwipeableList"] > div[data-testid="ScrollSnap-List"] > div[role="presentation"] > button)
-twitter.com,x.com##button:has(> div > svg > g > path[d^="M2.205 7.423L11.745 21h4.241L6.446"])
+twitter.com,x.com##button:has(svg > g > path[d^="M2.205 7.423L11.745 21h4.241L6.446"])
 twitter.com,x.com##nav > a[href="/i/grok"]
 twitter.com,x.com##div:has(> button[data-testid="grokImgGen"])
 ! Communities Menu
