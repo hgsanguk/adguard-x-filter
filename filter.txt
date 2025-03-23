@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
-! Version: 2025.0202.0
+! Version: 2025.0324.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -22,8 +22,6 @@ twitter.com,x.com##div[data-testid="analytics-preview"] > div > a[href="/i/premi
 twitter.com,x.com##a[data-testid="highlightUpsell"]
 ! Edit Post
 twitter.com,x.com##div[data-testid="editWithPremium"]
-
-!#if (adguard_app_ios || adguard_app_android)
 ! X Premium Prompt in Timeline
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
 twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
@@ -34,21 +32,3 @@ twitter.com,x.com##div[role="dialog"] > div > div > div:has(a[href="/i/monetizat
 twitter.com,x.com##div[data-testid="sheetDialog"] a[href^="/i/premium_sign_up"]
 ! Create Community Button
 twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
-
-!#else
-! X Premium Prompt in Timeline
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
-twitter.com,x.com##div[data-testid="primaryColumn"]:has(div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
-! Sidebar
-twitter.com,x.com##div:has(> aside > a[href="/i/verified-choose"])
-twitter.com,x.com##div:has(> aside > a[href="/i/premium_sign_up"])
-! Dropdown Menu
-twitter.com,x.com##div[data-testid="Dropdown"] > div > div:has(a[href="/i/monetization"], a[href^="/i/premium_sign_up"], a[href="/i/verified-orgs-signup"], a[href="/i/account_analytics"])
-! Navigation Bar
-twitter.com,x.com##nav > a[href="/i/premium_sign_up"]
-twitter.com,x.com##nav > a[href="/i/verified-orgs-signup"]
-! 'Upgrade to get verified Button' in Verified User's Profile
-twitter.com,x.com##div[data-testid="HoverCard"] a[href^="/i/premium_sign_up"]
-! Create Community Button
-twitter.com,x.com##div > a[href="/i/verified-get-verified"]
-!#endif

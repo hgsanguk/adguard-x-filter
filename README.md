@@ -1,7 +1,7 @@
-# AdGurard X Filter
+# AdGurard X Filter for iOS/iPasOS PWA
 X(구. 트위터) 웹 클라이언트의 불필요한 요소를 차단하여 서비스를 가볍게 이용할 수 있도록 하는 AdGuard 필터입니다. 특히 iOS, iPadOS 사용자가 광고를 차단하면서 네이티브 앱처럼 즐길 수 있는 PWA의 방해요소 필터링을 중점으로 합니다.
 
-Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), PC에선 [Control Panel for Twitter](https://github.com/insin/control-panel-for-twitter)가 있으니, 타 플랫폼은 해당 애플리케이션 사용을 권장합니다.
+Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 웹 환경에서는 [Control Panel for Twitter](https://github.com/insin/control-panel-for-twitter)가 있으니 타 플랫폼은 해당 애플리케이션 사용을 권장합니다.
 
 ## 종류
 기본적으로 사용자가 X Premium을 결제할 의향이 없다는 가정 하에 제작되었습니다. 
@@ -19,7 +19,6 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
   * 크리에이터 구독(슈퍼 팔로잉) 관련 모든 기능
   * X Premium 사용자 프로필의 아티클과 하이라이트
   * 내 프로필의 Who to follow
-  * 타임라인의 내가 팔로우하는 사람들의 메인 게시물, Who to follow, 추천 커뮤니티, 추천 크리에이터 등
   * 게시물 상세보기 최하단의 더 찾아보기(게시물 추천)
 
 ## 필터 링크
@@ -47,16 +46,11 @@ https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-extra.tx
 8. 광고, Premium 결제 유도와 방해 요소가 없는 깔끔한 X를 즐기시기 바랍니다.
  
 ## 사용 시 주의 사항
-### X PWA 자체의 문제점
 PWA의 업데이트가 오랜 기간 없었으므로 아래의 문제는 X 측에서 해결할 가능성이 낮습니다. 이 점 참고하셔서, iOS 클라이언트를 보조로 사용하실 것을 권장합니다.
 1. 스페이스 만들기가 불가능합니다. 참여는 가능합니다.
-2. 사진의 저장이 불가능합니다.
-3. 타래로 글을 이어나가게 되면 초안 저장이 불가능합니다. 단일 게시물만 초안 저장 가능합니다.
-4. 초안을 불러온 뒤 게시물 수정을 하고 게시해도, 수정한 사안이 반영되지 않습니다.
-5. 알림창에서 내가 리트윗한 글에 대한 반응을 누를 경우, 리트윗한 글의 링크가 아닌 내 계정의 리트윗 링크로 들어가져서 댓/답글이 보이지 않습니다.
-
-### 필터의 문제점
-1. 팔로잉/팔로워 목록의 '인증된 팔로워' 탭이 제거되더라도 팔로워를 누르면 기존대로 '인증된 팔로워' 페이지로 들어갑니다.
+2. 타래로 글을 이어나가게 되면 초안 저장이 불가능합니다. 단일 게시물만 초안 저장 가능합니다.
+3. 초안을 불러온 뒤 게시물 수정을 하고 게시해도, 수정한 사안이 반영되지 않습니다.
+4. 알림창에서 내가 리트윗한 글에 대한 반응을 누를 경우, 리트윗한 글의 링크가 아닌 내 계정의 리트윗 링크로 들어가져서 댓/답글이 보이지 않습니다.
 
 ## 문의 및 오작동 제보
 필터 관련 문의나 추가 차단 요소 제안은 필요시 스크린샷과 함께 issue를 열어주세요.
