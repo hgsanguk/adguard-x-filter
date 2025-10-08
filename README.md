@@ -3,39 +3,32 @@ X(구. 트위터) 웹 클라이언트의 불필요한 요소를 차단하여 서
 
 Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 웹 환경에서는 [Control Panel for Twitter](https://github.com/insin/control-panel-for-twitter)가 있으니 타 플랫폼은 해당 애플리케이션 사용을 권장합니다.
 
-## 종류
-기본적으로 사용자가 X Premium을 결제할 의향이 없다는 가정 하에 제작되었습니다. 
-* `filter.txt`: 기본 필터입니다. 무료 사용자에게 필요없는 X Premium 결제 유도만 제거합니다.
-  * 메뉴와 설정의 Grok, 수익 창출, X Premium
-  * 내 프로필의 아티클과 하이라이트 탭
-  * 다양한 곳에서의 X Premium 안내
+## 제거되는 요소들
+* 다양한 곳에서의 X Premium 안내
+  * 메뉴의 조직, 수익 창출, X Premium
+  * 나와 상대 프로필의 아티클과 하이라이트 탭
+  * 프로필의 인증 마크를 누르면 나오는 업그레이드 버튼
   * 커뮤니티 우측 상단 커뮤니티 생성 버튼
-* `filter-extra.txt`: 추가 필터입니다. 대다수의 사용자에게 필요없거나 방해될 것으로 예상되는 요소를 제거합니다.
-  * 메뉴의 채용, 광고(광고주의 광고 관리 페이지)
-  * 커뮤니티 관련 모든 기능(단, 타임라인과 검색 결과의 커뮤니티 게시뮬은 표시)
-  * 내 게시물 우측 상단의 프로모션 버튼
-  * 알림창의 인증됨 탭
-  * 팔로잉/팔로워 목록의 인증된 팔로워
-  * 크리에이터 구독(슈퍼 팔로잉) 관련 모든 기능
-  * X Premium 사용자 프로필의 아티클과 하이라이트
-  * 내 프로필의 Who to follow
-  * 게시물 상세보기 최하단의 더 찾아보기(게시물 추천)
+  * 나와 상대 프로필의 아티클과 하이라이트 탭
+  * 게시물 글자 제한수 초과 시 X Premium 업그레이드 안내
+  * 이외 등등...
+* 메뉴의 Grok, 채용, 광고(광고주의 광고 관리 페이지)
+* 다양한 곳에서의 Grok 버튼
+  * 프로필의 Grok 버튼
+  * 게시물 작성시 이미지 생성 버튼
+  * 트윗 우측 상단의 Grok으로 트윗 분석 버튼
+* 알림창의 인증됨 탭
+* 크리에이터 구독(슈퍼 팔로잉) 관련 모든 기능
+* 게시물 상세보기 최하단의 '더 찾아보기'(게시물 추천)
 
 ## 필터 링크
 > [!NOTE]
 > 기본 필터와 추가 필터는 각각 별개의 필터로, 추가 필터의 경우 기본 필터와 같이 사용해야 정상적으로 동작합니다.
-
-**기본 필터**
 ```
 https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
 ```
-**추가 필터**
-```
-https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter-extra.txt
-```
 
 ## 사용 방법
-### iOS, iPadOS
 1. App Store에서 [AdGuard](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162)를 설치합니다.
 2. 앱을 연 후 지시대로 Safari에서 AdGuard 확장 프로그램을 활성화합니다.
 3. AdGuard에서 `보호 > Safari 보호 > 필터 > Custom`에서 스위치를 켜 활성화합니다.
