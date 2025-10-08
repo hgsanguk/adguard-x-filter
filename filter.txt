@@ -27,7 +27,7 @@ twitter.com,x.com##div[data-testid="verified_profile_visitor_upsell"]
 twitter.com,x.com##div[data-testid="sheetDialog"] > div > a[href="/i/premium_sign_up?referring_page=verification_reason_dialog"]
 !! 'Upgrade to get verified' Button in my profile
 twitter.com,x.com##div:is([style="background-color: rgb(194, 241, 220);"], [style="background-color: rgb(0, 67, 41);"]):has(> div > a[href="/i/premium_sign_up"])
-twitter.com,x.com##div[data-testid="UserName"] > div:has(> div > div > div > a[href="/i/premium_sign_up"])
+twitter.com,x.com##div[data-testid="UserName"] > div:has(> div > div > div > a[href^="/i/premium_sign_up"])
 !! Create Community Button
 twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
 !! Verified Nofification
