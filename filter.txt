@@ -1,34 +1,58 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
-! Description: X(구. 트위터)의 Premium 결제 유도를 제거하는 필터입니다.
-! Version: 2025.0324.0
+! Description: X(구. 트위터)의 Premium 결제 유도와 자주 사용하지 않는 기능을 제거하는 필터입니다.
+! Version: 2025.1008.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
 ! License: https://github.com/hgsanguk/adguard-x-filter/blob/main/LICENSE
 !
 
-! Subscribe to Premium Message in post when exceed the character limit
-twitter.com,x.com##div[role="status"]:has(a[href^="/i/premium_sign_up"])
-! X Premium, Monetization in Settings
-twitter.com,x.com##div[data-testid="activeRoute"]:has(a[href^="/i/premium_sign_up"], a[href="/settings/monetization"])
-! Unnecessary Tab in My Profile
-twitter.com,x.com##div:has(a[href="/settings/profile"]) + nav div[role="presentation"]:has(a[href$="/articles"], a[href$="/highlights"])
-! Get Verfiy Mark Button in My Profile
-twitter.com,x.com##div[data-testid="UserName"] > div > div:has(a[href^="/i/premium_sign_up"])
-! Start Analytics in My Profile
-twitter.com,x.com##div[data-testid="analytics-preview"] > div > a[href="/i/premium_sign_up"]
-! Highlight on My Profile
-twitter.com,x.com##a[data-testid="highlightUpsell"]
-! Edit Post
-twitter.com,x.com##div[data-testid="editWithPremium"]
-! X Premium Prompt in Timeline
-twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"])
-twitter.com,x.com##div[id="react-root"]:has(div[data-testid="TopNavBar"] div[data-testid="ScrollSnap-List"] > div > a[href="/home"]) section > div > div > div[data-testid="cellInnerDiv"]:has(div[data-testid="inlinePrompt"]) ~ div[data-testid="cellInnerDiv"]:not(:has(article, a[href^="/i/status/"]))
-twitter.com,x.com##div[data-testid="TopNavBar"] div > div:has(> a[href^="/i/premium_sign_up"])
-! Monetization Menu, X Premium Menu, Verified Organization
-twitter.com,x.com##div[role="dialog"] > div > div > div:has(a[href="/i/monetization"], a[href="/i/premium_sign_up"], a[href="/i/verified-orgs-signup"], a[href="/i/account_analytics"])
-! 'Upgrade to get verified Button' in Verified User's Profile
-twitter.com,x.com##div[data-testid="sheetDialog"] a[href^="/i/premium_sign_up"]
-! Create Community Button
+!!! X Premium Upsell !!!
+!! Subscribe to Premium Message in post when exceed the character limit
+twitter.com,x.com##div[aria-live="polite"][role="status"]:has(a[href="/i/premium_sign_up?referring_page=post-composer"])
+!! X Premium, Monetization in Settings
+twitter.com,x.com##div[data-testid="activeRoute"]:has(a:is([href^="/i/premium_sign_up"], [href="/settings/monetization"], [href="/settings/manage_subscriptions"]))
+!! Unnecessary Tab in Profile
+twitter.com,x.com##nav[role="navigation"] > div > div[data-testid="ScrollSnap-SwipeableList"] > div[role="tablist"][data-testid="ScrollSnap-List"] > div[role="presentation"]:has(a:is([href$="/articles"], [href$="/highlights"], [href$="/creator-subscriptions/subscriptions"], [href="/notifications/verified"]))
+!! Highlight post on My Profile
+twitter.com,x.com##div[data-testid="sheetDialog"] > a[role="menuitem"][data-testid="highlightUpsell"]
+!! Edit post
+twitter.com,x.com##div[data-testid="sheetDialog"] > div[role="menuitem"][data-testid="editWithPremium"]
+!! Monetization Menu, X Premium Menu, Verified Organization
+twitter.com,x.com##div[role="dialog"] > div > div > div:has(> a:is([href="/i/monetization"], [href="/i/premium_sign_up"], [href="/i/verified-orgs-signup"], [href="/i/account_analytics"], [href^="https://ads.x.com/"], [href="/i/chat"], [href$="/superfollows"]))
+!! 'Upgrade to get verified Button' in verified user's profile
+twitter.com,x.com##div[data-testid="verified_profile_visitor_upsell"]
+!! 'Upgrade to get verified Button' in my profile
+twitter.com,x.com##div:is([style="background-color: rgb(194, 241, 220);"], [style="background-color: rgb(0, 67, 41);"]):has(> div > a[href="/i/premium_sign_up"])
+!! Create Community Button
 twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
+!! Verified Nofification
+! <Go to Line 17>
+
+!!! Grok !!!
+!! Grok Button in navigation bar
+twitter.com,x.com##div[data-testid="BottomBar"] > div > nav[role="navigation"] > a[href="/i/grok"]
+!! Grok Button in Tweets, Profile
+twitter.com,x.com##div > button[role="button"][type="button"]:has(> div[dir="ltr"] svg > g > path[d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"])
+
+!!! Subscribe !!!
+!! Subscriptions Count in Profile
+twitter.com,x.com##div[data-testid="UserName"] ~ div > div:has(> a[href$="/creator-subscriptions/subscriptions"])
+!! Subscriptions Tab in Followers/Following List
+! <Go to Line 17>
+!! Subscribe Button in Following's Profile
+twitter.com,x.com##button[role="button"][style*="border-color: rgb(201, 54, 204)"]
+!! Creator Subscriptions in Settings
+! <Go to Line 15>
+!! Subscribe Button in Post
+twitter.com,x.com##article[data-testid="tweet"][tabindex="-1"] div:has(> button[data-testid$="-subscribe"])
+twitter.com,x.com##div[data-testid="sheetDialog"] > div[role="menuitem"][data-testid="subscribe"]
+!! Subscriber Icon
+twitter.com,x.com##div[data-testid="User-Name"] > div > div > a[role="link"] > div > div > span > div[aria-expanded="false"][aria-haspopup="menu"]:has(> button > svg[data-testid="icon-subscriber"])
+
+!! We're Hiring in Profile
+twitter.com,x.com##div[data-testid="jobs"]
+
+!! Discover more in the bottom of Posts
+twitter.com,x.com##div[tabindex="0"] > section[role="region"] > h1 + div > div > :is(div[data-testid="cellInnerDiv"]:has(> div > div > div > h2 + div), div[data-testid="cellInnerDiv"]:has(> div > div > div > h2 + div) ~ div[data-testid="cellInnerDiv"]:has(> div > div > article[data-testid="tweet"]))
