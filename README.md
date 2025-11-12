@@ -1,7 +1,7 @@
-# AdGurard X Filter for iOS/iPasOS PWA
+# AdGurard X Filter for iOS/iPadOS PWA
 X(구. 트위터) 웹 클라이언트의 불필요한 요소를 차단하여 서비스를 가볍게 이용할 수 있도록 하는 AdGuard 필터입니다. 특히 iOS, iPadOS 사용자가 광고를 차단하면서 네이티브 앱처럼 즐길 수 있는 PWA의 방해요소 필터링을 중점으로 합니다.
 
-Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 웹 환경에서는 [Control Panel for Twitter](https://github.com/insin/control-panel-for-twitter)가 있으니 타 플랫폼은 해당 애플리케이션 사용을 권장합니다.
+Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), PC 환경에서는 [Control Panel for Twitter](https://github.com/insin/control-panel-for-twitter)가 있으니 타 플랫폼은 해당 애플리케이션 사용을 권장합니다.
 
 ## 제거되는 요소들
 * 다양한 곳에서의 X Premium 안내
@@ -9,21 +9,19 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
   * 나와 상대 프로필의 아티클과 하이라이트 탭
   * 프로필의 인증 마크를 누르면 나오는 업그레이드 버튼
   * 커뮤니티 우측 상단 커뮤니티 생성 버튼
-  * 나와 상대 프로필의 아티클과 하이라이트 탭
   * 게시물 글자 제한수 초과 시 X Premium 업그레이드 안내
   * 이외 등등...
-* 메뉴의 Grok, 채용, 광고(광고주의 광고 관리 페이지)
-* 다양한 곳에서의 Grok 버튼
+* 메뉴의 Grok, 채용, 광고 집행
+* 나와 상대 프로필의 아티클과 하이라이트 탭
+* 다양한 곳에서의 Grok 버튼(Grok 사용 트윗, Grok의 트윗 제외)
   * 프로필의 Grok 버튼
   * 게시물 작성시 이미지 생성 버튼
   * 트윗 우측 상단의 Grok으로 트윗 분석 버튼
 * 알림창의 인증됨 탭
 * 크리에이터 구독(슈퍼 팔로잉) 관련 모든 기능
-* 게시물 상세보기 최하단의 '더 찾아보기'(게시물 추천)
+* 게시물 상세보기 하단의 '더 찾아보기'
 
 ## 필터 링크
-> [!NOTE]
-> 기본 필터와 추가 필터는 각각 별개의 필터로, 추가 필터의 경우 기본 필터와 같이 사용해야 정상적으로 동작합니다.
 ```
 https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
 ```
@@ -38,12 +36,10 @@ https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
 7. 원하는 이름을 지정하고 홈 화면에 X의 바로가기를 추가합니다.
 8. 광고, Premium 결제 유도와 방해 요소가 없는 깔끔한 X를 즐기시기 바랍니다.
  
-## 사용 시 주의 사항
-PWA의 업데이트가 오랜 기간 없었으므로 아래의 문제는 X 측에서 해결할 가능성이 낮습니다. 이 점 참고하셔서, iOS 클라이언트를 보조로 사용하실 것을 권장합니다.
+## PWA 클라이언트 사용 시 주의 사항
 1. 스페이스 만들기가 불가능합니다. 참여는 가능합니다.
-2. 타래로 글을 이어나가게 되면 초안 저장이 불가능합니다. 단일 게시물만 초안 저장 가능합니다.
-3. 초안을 불러온 뒤 게시물 수정을 하고 게시해도, 수정한 사안이 반영되지 않습니다.
-4. 알림창에서 내가 리트윗한 글에 대한 반응을 누를 경우, 리트윗한 글의 링크가 아닌 내 계정의 리트윗 링크로 들어가져서 댓/답글이 보이지 않습니다.
+2. 초안을 불러온 뒤 게시물 수정을 하고 게시해도, 수정한 사안이 반영되지 않습니다.
+3. 트윗 작성시 꾹 눌러 편집 툴바를 띄울 경우 먹통되는 문제가 자주있습니다.
 
 ## 문의 및 오작동 제보
 필터 관련 문의나 추가 차단 요소 제안은 필요시 스크린샷과 함께 issue를 열어주세요.
