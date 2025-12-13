@@ -22,6 +22,8 @@ Android에선 [ReVanced](https://revanced.app/patches?pkg=com.twitter.android), 
 * 게시물 상세보기 하단의 '더 찾아보기'
 
 ## 필터 링크
+> [!NOTE]
+> 해당 필터는 X Premium을 사용하지 않는 이용자를 위해 작성되었으며, X Premium을 구독하는 경우 필터가 제대로 동작하지 않을 수도 있습니다.
 ```
 https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
 ```
@@ -39,7 +41,7 @@ https://raw.githubusercontent.com/hgsanguk/adguard-x-filter/main/filter.txt
 ## PWA 클라이언트 사용 시 주의 사항
 1. 스페이스 만들기가 불가능합니다. 참여는 가능합니다.
 2. 초안을 불러온 뒤 게시물 수정을 하고 게시해도, 수정한 사안이 반영되지 않습니다.
-3. 트윗 작성시 꾹 눌러 편집 툴바를 띄울 경우 먹통되는 문제가 자주있습니다.
+3. 트윗 작성시 꾹 눌러 편집 툴바를 띄울 경우 자주 먹통되는 문제가 있습니다.
 
 ## 문의 및 오작동 제보
 필터 관련 문의나 추가 차단 요소 제안은 필요시 스크린샷과 함께 issue를 열어주세요.

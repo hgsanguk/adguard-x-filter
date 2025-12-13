@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도와 자주 사용하지 않는 기능을 제거하는 필터입니다.
-! Version: 2025.1112.0
+! Version: 2025.1213.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -20,7 +20,7 @@ twitter.com,x.com##div[data-testid="sheetDialog"] > a[role="menuitem"]:is([data-
 !! Edit post
 twitter.com,x.com##div[data-testid="sheetDialog"] > div[role="menuitem"][data-testid="editWithPremium"]
 !! Monetization Menu, X Premium Menu, Verified Organization
-twitter.com,x.com##div[role="dialog"] > div > div > div:has(> a:is([href="/i/monetization"], [href="/i/premium_sign_up"], [href="/i/verified-orgs-signup"], [href="/i/account_analytics"], [href^="https://ads.x.com/"], [href="/i/chat"], [href$="/superfollows"]))
+twitter.com,x.com##div[role="dialog"] > div > div > div:has(> a:is([href="/i/monetization"], [href="/i/premium_sign_up"], [href="/i/verified-orgs-signup"], [href="/i/account_analytics"], [href^="https://ads.x.com/"], [href="/i/chat"], [href$="/superfollows"], [href="/i/jf/creators/studio"], [href="/i/connect_people"]))
 !! 'Upgrade to get verified' Button in verified user's profile
 twitter.com,x.com##div[data-testid="verified_profile_visitor_upsell"]
 !! 'Upgrade to get verified' Button when touch verified mark
@@ -60,4 +60,4 @@ twitter.com,x.com##div[data-testid="jobs"]
 !! Discover more in the bottom of Posts
 twitter.com,x.com##div[tabindex="0"] > section[role="region"] > h1 + div > div > :is(div[data-testid="cellInnerDiv"]:has(> div > div > div > h2 + div), div[data-testid="cellInnerDiv"]:has(> div > div > div > h2 + div) ~ div[data-testid="cellInnerDiv"]:has(> div > div > article[data-testid="tweet"]):not(div[data-testid="cellInnerDiv"]:has(> div > div > div > h2):not(:has(> div > div > div > h2 + div)) ~ div[data-testid="cellInnerDiv"]:has(> div > div > article[data-testid="tweet"])))
 !! App Download Banner in Menu
-div[role="dialog"] > div > div > div:has(> div > button[aria-label="Close"], a[href^="https://apps.apple.com/app/apple-store/id333903271"])
+twitter.com,x.com##div[role="dialog"] > div > div > div:has(> div > button[aria-label="Close"], a[href^="https://apps.apple.com/app/apple-store/id333903271"])
