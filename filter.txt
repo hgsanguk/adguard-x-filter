@@ -1,7 +1,7 @@
 [AdGuard]
 ! Title: X Filter for AdGuard
 ! Description: X(구. 트위터)의 Premium 결제 유도와 자주 사용하지 않는 기능을 제거하는 필터입니다.
-! Version: 2025.1227.0
+! Version: 2025.1229.0
 ! Expires: 1 day
 ! Homepage: https://github.com/hgsanguk/adguard-x-filter
 ! Support: https://github.com/hgsanguk/adguard-x-filter/issues
@@ -10,7 +10,7 @@
 
 !!! X Premium Upsell !!!
 !! Subscribe Button in Top
-twitter.com,x.com##div[data-testid="TopNavBar"] > div > div > div > div > div > div > div > div:has(> div > div > a[href="/i/premium_sign_up"])
+twitter.com,x.com##div[data-testid="TopNavBar"] > div > div > div > div > div > div > div > div:has(> div > div > a[href^="/i/premium_sign_up"])
 !! Subscribe to Premium Message in post when exceed the character limit
 twitter.com,x.com##div[aria-live="polite"][role="status"]:has(a[href="/i/premium_sign_up?referring_page=post-composer"])
 !! X Premium, Monetization in Settings
@@ -28,7 +28,7 @@ twitter.com,x.com##div[data-testid="verified_profile_visitor_upsell"]
 !! 'Upgrade to get verified' Button when touch verified mark
 twitter.com,x.com##div[data-testid="sheetDialog"] > div > a[href="/i/premium_sign_up?referring_page=verification_reason_dialog"]
 !! 'Upgrade to get verified' Button in my profile
-twitter.com,x.com##div:is([style^="background-color: rgb(194, 241, 220);"], [style^="background-color: rgb(0, 67, 41);"]):has(> div > a[href="/i/premium_sign_up"])
+twitter.com,x.com##div:is([style^="background-color: rgb(194, 241, 220);"], [style^="background-color: rgb(0, 67, 41);"]):has(> div > a[href^="/i/premium_sign_up"])
 twitter.com,x.com##div[data-testid="UserName"] > div:has(> div > div > div > a[href*="/i/premium_sign_up"])
 !! Create Community Button
 twitter.com,x.com##div[data-testid="TopNavBar"] a[href="/i/verified-get-verified"]
